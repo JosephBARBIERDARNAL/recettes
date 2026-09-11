@@ -1,0 +1,51 @@
+slug: salade-lentilles
+title: Salade de lentilles
+description: "Une salade fraîche, vive et rassasiante, prête en un quart d'heure."
+icon: lucide/leaf
+servings: 4
+prep_time: 15 min
+difficulty: Très facile
+diet: Végétarien
+equipment: Aucun appareil
+seasoning: Sel et poivre, selon le goût.
+
+ingredient_groups:
+  - title: Dans le saladier
+    ingredients:
+      - amount: 500
+        unit: g
+        name: "de lentilles en conserve, égouttées et rincées"
+      - amount: 250
+        unit: g
+        name: "de tomates cerises coupées en deux"
+      - amount: 0.5
+        name: "concombre épluché et coupé en dés"
+      - amount: 1
+        name: "oignon rouge ciselé"
+        info: "Coupé en tout petits dés réguliers"
+      - amount: 100
+        unit: g
+        name: "de feta AOP coupée en petits dés"
+
+  - title: Pour la sauce
+    ingredients:
+      - amount: 1
+        unit: c. à café
+        name: "de moutarde forte"
+      - amount: 2
+        unit: c. à soupe
+        name: "de saumure (ou vinaigre de cornichon)"
+      - amount: 2
+        unit: c. à soupe
+        name: "d'huile d'olive"
+      - amount: 1
+        unit: c. à soupe
+        name: "de harissa"
+
+steps:
+  - title: Préparer le saladier
+    text: "Déposez les lentilles rincées, les tomates cerises, le concombre, l'oignon rouge et la feta dans un grand saladier."
+  - title: Monter la sauce
+    text: "Dans un bol séparé, mélangez la moutarde, la saumure, l'huile d'olive et la harissa jusqu'à obtenir une sauce homogène."
+  - title: Assaisonner et servir
+    text: "Ajoutez la sauce au saladier, mélangez délicatement, puis rectifiez l'assaisonnement. Servez avec des œufs brouillés."
