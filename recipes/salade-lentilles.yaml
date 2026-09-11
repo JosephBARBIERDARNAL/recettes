@@ -38,9 +38,12 @@ ingredient_groups:
       - amount: 2
         unit: c. à soupe
         name: "d'huile d'olive"
+      - amount: 2
+        unit: c. à soupe
+        name: "de jus de citron"
       - amount: 1
         unit: c. à soupe
-        name: "de harissa"
+        name: "de harissa (optionnel)"
 
 steps:
   - title: Préparer le saladier
