@@ -14,6 +14,12 @@ concurrency:
   cancel-in-progress: false
 jobs:
   deploy:
+    # github-pages is protected by a branch rule that currently rejects main.
+    # deploy-pages requires an environment, so use this unprotected deployment
+    # environment until that repository rule is updated.
+    environment:
+      name: pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
