@@ -166,7 +166,7 @@ body:has(.recipe-page) .md-content__inner::before {
   letter-spacing: 0.1em;
 }
 
-.recipe-page .recipe-nutrition__list {
+.recipe-page .recipe-nutrition__list:not([hidden]) {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.45rem;

@@ -33,24 +33,24 @@ icon: lucide/leaf
         <p class="recipe-nutrition__eyebrow">VALEURS NUTRITIONNELLES</p>
         <h2 id="nutrition-title">Par portion</h2>
       </div>
-      <ul class="recipe-nutrition__list" aria-label="Valeurs nutritionnelles par portion">
-      <li class="recipe-nutrition__item">
+      <div class="recipe-nutrition__list" role="list" aria-label="Valeurs nutritionnelles par portion">
+      <div class="recipe-nutrition__item" role="listitem">
         <span class="recipe-nutrition__label">Énergie</span>
-        <strong>570 <span>kcal</span></strong>
-      </li>
-      <li class="recipe-nutrition__item">
+        <strong>350 <span>kcal</span></strong>
+      </div>
+      <div class="recipe-nutrition__item" role="listitem">
         <span class="recipe-nutrition__label">Glucides</span>
-        <strong>53 <span>g</span></strong>
-      </li>
-      <li class="recipe-nutrition__item">
+        <strong>27 <span>g</span></strong>
+      </div>
+      <div class="recipe-nutrition__item" role="listitem">
         <span class="recipe-nutrition__label">Lipides</span>
-        <strong>15 <span>g</span></strong>
-      </li>
-      <li class="recipe-nutrition__item">
+        <strong>14 <span>g</span></strong>
+      </div>
+      <div class="recipe-nutrition__item" role="listitem">
         <span class="recipe-nutrition__label">Protéines</span>
-        <strong>38 <span>g</span></strong>
-      </li>
-      </ul>
+        <strong>20 <span>g</span></strong>
+      </div>
+      </div>
     </section>
   </header>
 

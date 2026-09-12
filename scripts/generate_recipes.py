@@ -129,10 +129,10 @@ def render_group(group: dict[str, Any], servings: float, recipe_slug: str) -> st
 
 def render_nutrition(macros: dict[str, Any]) -> str:
     items = "\n".join(
-        f"""      <li class="recipe-nutrition__item">
+        f"""      <div class="recipe-nutrition__item" role="listitem">
         <span class="recipe-nutrition__label">{escape(label)}</span>
         <strong>{escape(macros[key])} <span>{escape(unit)}</span></strong>
-      </li>"""
+      </div>"""
         for key, label, unit in NUTRITION_FIELDS
     )
     return f"""    <section class="recipe-nutrition" aria-labelledby="nutrition-title">
@@ -140,9 +140,9 @@ def render_nutrition(macros: dict[str, Any]) -> str:
         <p class="recipe-nutrition__eyebrow">VALEURS NUTRITIONNELLES</p>
         <h2 id="nutrition-title">Par portion</h2>
       </div>
-      <ul class="recipe-nutrition__list" aria-label="Valeurs nutritionnelles par portion">
+      <div class="recipe-nutrition__list" role="list" aria-label="Valeurs nutritionnelles par portion">
 {items}
-      </ul>
+      </div>
     </section>"""
 
 
