@@ -28,6 +28,30 @@ icon: lucide/leaf
         <strong>Aucun appareil</strong>
       </li>
     </ul>
+    <section class="recipe-nutrition" aria-labelledby="nutrition-title">
+      <div class="recipe-nutrition__heading">
+        <p class="recipe-nutrition__eyebrow">VALEURS NUTRITIONNELLES</p>
+        <h2 id="nutrition-title">Par portion</h2>
+      </div>
+      <ul class="recipe-nutrition__list" aria-label="Valeurs nutritionnelles par portion">
+      <li class="recipe-nutrition__item">
+        <span class="recipe-nutrition__label">Énergie</span>
+        <strong>570 <span>kcal</span></strong>
+      </li>
+      <li class="recipe-nutrition__item">
+        <span class="recipe-nutrition__label">Glucides</span>
+        <strong>53 <span>g</span></strong>
+      </li>
+      <li class="recipe-nutrition__item">
+        <span class="recipe-nutrition__label">Lipides</span>
+        <strong>15 <span>g</span></strong>
+      </li>
+      <li class="recipe-nutrition__item">
+        <span class="recipe-nutrition__label">Protéines</span>
+        <strong>38 <span>g</span></strong>
+      </li>
+      </ul>
+    </section>
   </header>
 
   <div class="recipe-servings-bar" aria-label="Nombre de portions">
@@ -87,7 +111,7 @@ icon: lucide/leaf
             </label>
           </li>
         </ul>
-      </section>
+    </section>
 
       <section class="ingredient-group" aria-labelledby="salade-lentilles-pour-la-sauce-title">
         <h3 id="salade-lentilles-pour-la-sauce-title">Pour la sauce</h3>
@@ -128,7 +152,7 @@ icon: lucide/leaf
             </label>
           </li>
         </ul>
-      </section>
+    </section>
 
       <p class="recipe-card__footnote">Sel et poivre, selon le goût.</p>
     </aside>

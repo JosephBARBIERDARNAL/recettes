@@ -22,6 +22,12 @@ FRACTION_GLYPHS = {
     0.667: "⅔",
     0.75: "¾",
 }
+NUTRITION_FIELDS = (
+    ("kcal", "Énergie", "kcal"),
+    ("glucides", "Glucides", "g"),
+    ("lipides", "Lipides", "g"),
+    ("protéines", "Protéines", "g"),
+)
 
 
 def escape(value: Any) -> str:
@@ -118,7 +124,26 @@ def render_group(group: dict[str, Any], servings: float, recipe_slug: str) -> st
         <ul class="recipe-ingredients-list">
 {ingredients}
         </ul>
-      </section>"""
+    </section>"""
+
+
+def render_nutrition(macros: dict[str, Any]) -> str:
+    items = "\n".join(
+        f"""      <li class="recipe-nutrition__item">
+        <span class="recipe-nutrition__label">{escape(label)}</span>
+        <strong>{escape(macros[key])} <span>{escape(unit)}</span></strong>
+      </li>"""
+        for key, label, unit in NUTRITION_FIELDS
+    )
+    return f"""    <section class="recipe-nutrition" aria-labelledby="nutrition-title">
+      <div class="recipe-nutrition__heading">
+        <p class="recipe-nutrition__eyebrow">VALEURS NUTRITIONNELLES</p>
+        <h2 id="nutrition-title">Par portion</h2>
+      </div>
+      <ul class="recipe-nutrition__list" aria-label="Valeurs nutritionnelles par portion">
+{items}
+      </ul>
+    </section>"""
 
 
 def render_recipe(recipe: dict[str, Any], source_path: Path) -> str:
@@ -143,6 +168,7 @@ def render_recipe(recipe: dict[str, Any], source_path: Path) -> str:
       </li>"""
         for label, value, tag in facts
     )
+    nutrition_html = render_nutrition(recipe["macros"])
     groups_html = "\n\n".join(
         render_group(group, servings, slug)
         for group in recipe.get("ingredient_groups", [])
@@ -183,6 +209,7 @@ def render_recipe(recipe: dict[str, Any], source_path: Path) -> str:
     <ul class="recipe-facts" aria-label="Informations pratiques">
 {facts_html}
     </ul>
+{nutrition_html}
   </header>
 
   <div class="recipe-servings-bar" aria-label="Nombre de portions">
@@ -240,12 +267,32 @@ def load_recipes() -> list[tuple[Path, dict[str, Any]]]:
             "difficulty",
             "diet",
             "equipment",
+            "macros",
             "ingredient_groups",
             "steps",
         }
         missing = sorted(required - data.keys())
         if missing:
             raise ValueError(f"{path}: missing fields: {', '.join(missing)}")
+        macros = data["macros"]
+        if not isinstance(macros, dict):
+            raise ValueError(f"{path}: macros must be a mapping")
+        missing_macros = sorted(
+            key for key, _, _ in NUTRITION_FIELDS if key not in macros
+        )
+        if missing_macros:
+            raise ValueError(
+                f"{path}: missing macros fields: {', '.join(missing_macros)}"
+            )
+        invalid_macros = sorted(
+            key
+            for key, _, _ in NUTRITION_FIELDS
+            if not numeric_amount(macros[key]) or macros[key] < 0
+        )
+        if invalid_macros:
+            raise ValueError(
+                f"{path}: macros must be non-negative numbers: {', '.join(invalid_macros)}"
+            )
         slug = str(data["slug"])
         if slug in slugs:
             raise ValueError(f"Duplicate recipe slug: {slug}")

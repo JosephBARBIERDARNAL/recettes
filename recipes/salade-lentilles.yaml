@@ -9,6 +9,12 @@ diet: Végétarien
 equipment: Aucun appareil
 seasoning: Sel et poivre, selon le goût.
 
+macros:
+  kcal: 570
+  glucides: 53
+  lipides: 15
+  protéines: 38
+
 ingredient_groups:
   - title: Dans le saladier
     ingredients:

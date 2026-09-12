@@ -143,6 +143,69 @@ body:has(.recipe-page) .md-content__inner::before {
   color: var(--recipe-green) !important;
 }
 
+.recipe-nutrition {
+  display: grid;
+  gap: 0.75rem;
+  width: 100%;
+  padding-top: 0.15rem;
+}
+
+.recipe-nutrition__heading h2 {
+  margin: 0.25rem 0 0;
+  color: var(--recipe-ink);
+  font-size: 0.88rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.recipe-nutrition__eyebrow {
+  margin: 0;
+  color: var(--recipe-coral);
+  font-size: 0.57rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.recipe-nutrition__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recipe-nutrition__item {
+  display: grid;
+  min-width: 0;
+  gap: 0.15rem;
+  padding: 0.48rem 0.68rem;
+  border: 1px solid var(--recipe-line);
+  border-radius: 9px;
+  background: var(--recipe-surface);
+}
+
+.recipe-nutrition__label {
+  color: var(--recipe-muted);
+  font-size: 0.57rem;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.recipe-nutrition__item strong {
+  color: var(--recipe-green);
+  font-size: 0.82rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.recipe-nutrition__item strong span {
+  color: var(--recipe-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
 .recipe-servings-bar {
   display: flex;
   align-items: center;
