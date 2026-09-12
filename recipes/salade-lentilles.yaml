@@ -10,10 +10,10 @@ equipment: Aucun appareil
 seasoning: Sel et poivre, selon le goût.
 
 macros:
-  kcal: 570
-  glucides: 53
-  lipides: 15
-  protéines: 38
+  kcal: 350
+  glucides: 27
+  lipides: 14
+  protéines: 20
 
 ingredient_groups:
   - title: Dans le saladier
