@@ -2,4 +2,5 @@
 
 # Recettes
 
+- [Pâtes aux courgettes, sauce au bleu](pates-courgettes-sauce-bleu.md)
 - [Salade de lentilles](salade-lentilles.md)

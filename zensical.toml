@@ -5,7 +5,7 @@ site_description = "Des recettes pour tous les jours"
 site_author = "Joseph Barbier"
 
 nav = [
-  { "Recettes" = "index.md", "Salade de lentilles" = "salade-lentilles.md" },
+  { "Recettes" = "index.md", "Pâtes aux courgettes, sauce au bleu" = "pates-courgettes-sauce-bleu.md", "Salade de lentilles" = "salade-lentilles.md" },
 ]
 
 extra_css = [

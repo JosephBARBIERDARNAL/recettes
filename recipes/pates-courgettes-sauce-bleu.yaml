@@ -1,0 +1,48 @@
+slug: pates-courgettes-sauce-bleu
+title: Pâtes aux courgettes, sauce au bleu
+description: "Des linguine aux courgettes fondantes, nappées d'une sauce crémeuse au bleu."
+icon: lucide/wheat
+servings: 4
+prep_time: 30 min
+difficulty: Facile
+diet: Végétarien
+equipment: Casserole et poêle
+seasoning: Sel et poivre, selon le goût.
+
+macros:
+  kcal: 630
+  glucides: 60
+  lipides: 31
+  protéines: 24
+
+ingredient_groups:
+  - title: Pour les pâtes et les courgettes
+    ingredients:
+      - amount: 320
+        unit: g
+        name: de linguine
+      - amount: 800
+        unit: g
+        name: de courgettes
+      - amount: 5
+        name: gousses d'ail
+      - amount: 1
+        unit: c. à soupe
+        name: d'huile d'olive
+
+  - title: Pour la sauce au bleu
+    ingredients:
+      - amount: 200
+        unit: g
+        name: de bleu, au choix
+      - amount: 250
+        unit: g
+        name: de crème fraîche épaisse à 12 %
+
+steps:
+  - title: Cuire les pâtes
+    text: "Faites cuire les linguine dans une grande casserole d'eau bouillante salée selon les indications du paquet. Avant de les égoutter, gardez une petite tasse d'eau de cuisson."
+  - title: Faire revenir les courgettes
+    text: "Coupez les courgettes en demi-rondelles. Faites chauffer l'huile dans une poêle et faites-les dorer 8 à 10 minutes. Ajoutez l'ail haché en fin de cuisson et mélangez une minute."
+  - title: Préparer la sauce et assembler
+    text: "Baissez le feu, ajoutez la crème et le bleu émietté dans la poêle. Mélangez doucement jusqu'à ce que le fromage soit fondu, sans faire bouillir. Ajoutez les linguine et mélangez; détendez la sauce avec un peu d'eau de cuisson si nécessaire."
